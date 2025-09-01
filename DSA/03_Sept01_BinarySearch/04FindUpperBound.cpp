@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+// uper bound - return the element which is just lesser thn target or if present in array , return that element
 int UB(vector<int>arr  , int target){
     int n = arr.size();
     int start = 0 ;
