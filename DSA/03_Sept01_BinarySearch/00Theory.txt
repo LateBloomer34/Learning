@@ -1,0 +1,9 @@
+what is binary search - binary search is searching a algorithm in alimited space
+
+it uses divide & conqurer algorithm.
+it works only in sorted array/lists.
+
+
+algo - 
+1- create 2 pointer for first and last index:- start = 0, end = n-1(where n is the length of an array)
+2- find the mid of array - mid = end +(end-start)/2
