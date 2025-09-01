@@ -39,5 +39,7 @@ else{
 }
 
 
-
 in both cases time complexity is same - log(n)- coz every time array element divided into half;
+
+why mid = start+(end-start)/2 -  coz if range of end is INT_MAX, thn it will throw an error of limit reach.
+otherwise we can use ==> (start+end)/2;
