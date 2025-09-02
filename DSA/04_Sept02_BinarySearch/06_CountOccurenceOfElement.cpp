@@ -8,7 +8,7 @@ int occurence(vector<int>arr , int target){
     int end = n-1;
     int firstOccur = -1;
     int lastOccur = -1;
-
+// find first occurence of an element
     while(start<=end){
         int mid = start+(end-start)/2;
         if (target==arr[mid]){
@@ -22,7 +22,7 @@ int occurence(vector<int>arr , int target){
             start = mid+1;
         }
     }
-
+// find last occurence of an element
     start = 0 ; 
     end = n-1;
 
@@ -39,7 +39,13 @@ int occurence(vector<int>arr , int target){
             start = mid+1;
         }
     }
-    return (lastOccur-firstOccur+1);
+
+    // if lement not present in an array;
+    if (firstOccur==-1 && lastOccur==-1){
+        return 0;
+    }
+    
+return (lastOccur-firstOccur+1);
 }
 
 int main (){
