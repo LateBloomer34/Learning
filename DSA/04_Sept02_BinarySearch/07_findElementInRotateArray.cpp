@@ -12,6 +12,7 @@ int ele(vector<int>arr , int target){
         if (arr[mid]==target){
             return mid;
         }
+        
         if (arr[start]<arr[mid]){       // if lest part is sorted
             if (target>=arr[start] && target<=arr[mid]){
                 end = mid-1;
