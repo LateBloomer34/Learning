@@ -11,7 +11,8 @@ int insertEle(vector<int>arr , int target){
 
     while(start<=end){
         int mid = start+(end-start)/2;
-        if (target<arr[mid]){
+        int res = guess(mid);
+        if (res==0){
             ans = mid;
             end = mid-1;
         }
