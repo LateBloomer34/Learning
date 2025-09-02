@@ -14,7 +14,13 @@ int find (vector<int>arr , int target){
             return mid;
         }
 
-        if (arr[start]<=arr[mid]){      // if left half sorted
+        // if duplicte present in an array 
+        if (arr[start] == arr[mid] && arr[mid] == arr[end]) {
+                start++;
+                end--;
+            }
+
+        else if (arr[start]<=arr[mid]){      // if left half sorted
             if (target>=arr[start] && target<arr[mid]){
                 end = mid-1;
             }
@@ -37,7 +43,7 @@ int find (vector<int>arr , int target){
 
 
 int main (){
-    vector<int>arr = {7,8,1,2,3,3,3,4,5,6}; // repeating elements
-    int target = 5;
+    vector<int>arr = {1,0,1,1,1,1,1,1}; // repeating elements
+    int target = 0;
     cout<<find(arr , target);
 }
