@@ -16,7 +16,7 @@ int NthRoot(int num , int n){
     int ans  = -1;// to find floor value - if want to return -1 for not exact value remove line 23;
     while(start<=end){
         int mid = start+(end-start)/2;
-        if (pov(mid, n)==num){
+        if (pov(mid, n)==num){  //we can use here inbuild pow function here also , but we create manul pow fuction as pov 
             return mid; //exact root
         }
         else if (pov(mid , n)<num){
