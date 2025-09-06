@@ -11,11 +11,11 @@ int subarraySum(vector<int>arr, int target){
        if (sum==target){
            maxLen = max(maxLen , right-left+1);
        }
-       right++;
-        if (right<n){
-        sum = sum+arr[right];
+       right++;// move the right pointer to right side till right<n
+       if (right<n){
+           sum = sum+arr[right];
         }
-       
+        
     while(left<=right && sum>target){
            sum = sum-arr[left];
            left++;
