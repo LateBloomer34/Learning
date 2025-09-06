@@ -14,13 +14,17 @@ int unionArr(vector<int>arr1 , vector<int>arr2){
         if (uni.empty() || uni.back()!= arr1[i]){
             uni.push_back(arr1[i]);
         }
-        i++;
+        else{
+            i++;
+        }
         }
         else{
             if(uni.empty() || uni.back()!=arr2[j]){
                 uni.push_back(arr2[j]);
             }
-            j++;
+            else{
+                j++;
+            }
         }
     }
     // if no of element in arr1 is more than arr2
@@ -45,7 +49,7 @@ return 0;
 }
 
 int main (){
-    vector<int>arr1 = {1};
-    vector<int>arr2 = {2};
+    vector<int>arr1 = {1,2,3,4,5,5,5,6,7};
+    vector<int>arr2 = {2,9};
     unionArr(arr1 , arr2);
 }
