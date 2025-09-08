@@ -21,7 +21,7 @@ int subArray(vector<int>arr){
        
         if (sum < 0){
             sum = 0 ;
-            start = i+1;
+            start = i+1;    // if sum goes to <0 , start pointer is the next index
         }
         
     }
