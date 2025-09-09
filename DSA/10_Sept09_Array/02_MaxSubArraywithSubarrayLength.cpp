@@ -21,7 +21,7 @@ int subArray(vector<int>arr){
         if (sum<0){
             sum = 0 ;
             tempStart = i+1; 
-        } 
+        }
     }
     return (end - start +1);
 }
