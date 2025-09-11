@@ -28,7 +28,7 @@ int majority(vector<int>arr){
     if (maxCount>n/3){
         return ele;
     }
-    return -1;
+        return -1;
 }
 
 int main (){
