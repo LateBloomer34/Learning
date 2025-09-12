@@ -12,6 +12,7 @@ void rotate(vector<vector<int>>arr){
             int temp  =arr[i][j];
             arr[i][j] = arr[j][i];
             arr[j][i]= temp;
+            //arr[i][j]=arr[j][i]
         }
     }
 
@@ -24,6 +25,7 @@ void rotate(vector<vector<int>>arr){
             int temp = arr[i][start];
             arr[i][start]  = arr[i][end];
             arr[i][end] =temp;
+            //arr[i][start] = arr[i][end]
             start++;
             end--;
         }
