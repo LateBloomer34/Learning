@@ -20,7 +20,7 @@ void rotate(vector<vector<int>>arr){
 
     for (int i = 0 ;i < n ; i++){
         int start = 0 ;
-        int end = n-1;
+        int end = m-1;
         while(start<end){
             int temp = arr[i][start];
             arr[i][start]  = arr[i][end];
