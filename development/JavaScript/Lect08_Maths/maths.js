@@ -65,3 +65,8 @@ console.log("otp",Math.floor(Math.random()*(otpmax-otpmin+1)+otpmin));
 // but this is not safe and  acess by the hackers , coz it uses the system clock value 
 // so it will not use for otp generate
 
+// using Math.ceil()
+
+let mini = 2 ;
+let maxi = 5;
+console.log(Math.ceil(Math.random()*(maxi-mini+1)+(mini-1)));
