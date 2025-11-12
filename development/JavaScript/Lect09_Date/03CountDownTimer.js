@@ -13,10 +13,11 @@ let year = Math.floor((day/365));
 let month = Math.floor((day%365)/30);
 let remainingDay = (day%365)%30;
 
+
+// to calculate  remaining hours, minutes, seconds
 let remainingHours = hours % 24;
 let remainingMinutes = minute % 60;
 let remainingSeconds = second % 60;
-
 
 console.log(`year ${year} month ${month} day ${remainingDay} hour ${remainingHours} minutes ${remainingMinutes} second ${remainingSeconds} `);
 
