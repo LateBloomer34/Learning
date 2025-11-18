@@ -11,3 +11,4 @@
 // var meet  = function (){
 //     console.log("hello meet using let");
 //  }
+console.log(global);
