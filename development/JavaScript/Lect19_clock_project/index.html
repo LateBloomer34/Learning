@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+     <style>*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+#root{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
+    color: yellow;
+
+}
+
+</style>
+</head>
+<body >
+    <div id="root"></div>
+    <!-- <script src="./first.js"></script> -->
+     <script>
+
+        function time(){
+                const time = new Date()
+                const currTime  = time.toLocaleTimeString();
+
+                let obj = document.getElementById("root");
+                obj.innerHTML= currTime;
+            }
+                setInterval(time , 1000);
+     </script>
+</body>
+</html>
