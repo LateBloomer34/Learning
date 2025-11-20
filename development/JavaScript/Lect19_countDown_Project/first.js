@@ -1,9 +1,12 @@
-
 function time(){
 let currentTime = new Date();
 let targetTime = new Date(Date.UTC(2026 , 0 ,1));
+const remTime =   targetTime -currentTime;
 
-const remTime = targetTime - currentTime;
+// if (remTime<0){
+//     remTime = 0;
+// }
+
 const remTimeSecond = (remTime/1000);
 const remTimeMinute = remTimeSecond / 60;
 const remTimeHours = remTimeMinute / 60;
@@ -21,13 +24,10 @@ const hour = document.getElementById("hr");
 hour.innerHTML = Math.floor(remTimeHours%24);
 
 const day = document.getElementById("dy");
-day.innerHTML = Math.floor(remTimeDay%24);
+day.innerHTML = Math.floor(remTimeDay%30);
 
 const month = document.getElementById("mon");
-month.innerHTML = Math.floor(remTimeMonth%24);
+month.innerHTML = Math.floor(remTimeMonth%12);
 }
 
 setInterval(time , 1000);
-
- 
-
