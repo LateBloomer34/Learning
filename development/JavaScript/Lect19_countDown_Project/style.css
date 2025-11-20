@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    background-color: blanchedalmond;
+    height: 100vh;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 20vh;
+}
+
+#heading{
+    background-color: aqua;
+}
+#listMain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10vw;
+}
+#listMain1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10vw;
+}
+.one{
+    font-size: 2em;
+    text-transform: capitalize;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+.one5{
+   color: rgb(255, 115, 0);
+   height: 5vh;
+}
+.one51{
+    color: rgb(0, 162, 255);
+    font-size: 10vh;
+}

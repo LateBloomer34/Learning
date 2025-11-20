@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    background-color: blanchedalmond;
+    height: 100vh;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 20vh;
+}
+
+#heading{
+    background-color: aqua;
+}
+#listMain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10vw;
+}
+#listMain1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10vw;
+}
+.one{
+    font-size: 2em;
+    text-transform: capitalize;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+.one5{
+   color: rgb(255, 115, 0);
+   height: 5vh;
+}
+.one51{
+    color: rgb(0, 162, 255);
+    font-size: 10vh;
+}
+    </style>
+</head>
+<body>
+
+    <div id="root">
+        <h1 id="heading">CountDown to 2026</h1>
+        <li id="listMain1">
+            <ul id="one01" class="one">
+                <p class="one51" id="mon">one</p>
+                <p class="one5">month</p>
+            </ul>
+            <ul id="one11" class="one">
+                <p class="one51" id="dy">one</p>
+                <p class="one5">day</p>
+            </ul>
+            <ul id="one21" class="one">
+                <p class="one51" id="hr">one</p>
+                <p class="one5">hour</p>
+            </ul>
+            <ul id="one31" class="one">
+                <p class="one51" id="min">one</p>
+                <p class="one5">minute</p>
+            </ul>
+            <ul id="one41" class="one">
+                <p class="one51" id="sec"></p>
+                <p class="one5">second</p>
+            </ul>
+        </li>      
+    </div>
+    <script>
+
+function time(){
+let currentTime = new Date();
+let targetTime = new Date(Date.UTC(2026 , 0 ,1));
+
+const remTime = targetTime - currentTime;
+const remTimeSecond = (remTime/1000);
+const remTimeMinute = remTimeSecond / 60;
+const remTimeHours = remTimeMinute / 60;
+const remTimeDay = remTimeHours / 24;
+const remTimeMonth = remTimeDay / 30;
+
+
+const second = document.getElementById("sec");
+second.innerHTML = Math.floor(remTimeSecond%60);
+
+const minute = document.getElementById("min");
+minute.innerHTML = Math.floor(remTimeMinute%60);
+
+const hour = document.getElementById("hr");
+hour.innerHTML = Math.floor(remTimeHours%24);
+
+const day = document.getElementById("dy");
+day.innerHTML = Math.floor(remTimeDay%24);
+
+const month = document.getElementById("mon");
+month.innerHTML = Math.floor(remTimeMonth%24);
+}
+
+setInterval(time , 1000);
+    </script>
+</body>
+</html>
