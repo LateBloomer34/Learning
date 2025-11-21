@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Quote Generator</title>
+    <link rel="stylesheet" href="./QuoteGen.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    height: 100vh;
+    /* background: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#quote{
+    background-color: rgba(120, 21, 120, 0.082);
+    height: 30vh;
+    width: 80vw;
+    padding: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 2em;
+    box-shadow:  inset 2px 2px 5px 5px gray;
+}
+
+ #click{
+    background-color: aqua;
+    border: 0 none ;
+    border-radius: 5em;
+    height: 15vh;
+    width: 20vw;
+ } 
+    </style>
+</head>
+<body>
+
+    <div id="root">
+        <p id="quote"></p>
+        <!-- <button id="button">click here for new quote</button> -->
+        <!-- <input type="button" value="click me" id="button"> -->
+    </div>
+    <script>
+        const quotes = [
+  "Be yourself; everyone else is already taken.",
+  "The only way to do great work is to love what you do.",
+  "In the middle of every difficulty lies opportunity.",
+  "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+  "Believe you can and you're halfway there.",
+  "The future belongs to those who believe in the beauty of their dreams.",
+  "Do what you can, with what you have, where you are.",
+  "Act as if what you do makes a difference. It does.",
+  "Happiness depends upon ourselves.",
+  "Turn your wounds into wisdom.",
+  "The best way to predict the future is to create it.",
+  "Don't watch the clock; do what it does. Keep going.",
+  "If you want to lift yourself up, lift up someone else.",
+  "The harder you work for something, the greater you'll feel when you achieve it.",
+  "Dream big and dare to fail.",
+  "Life is 10% what happens to us and 90% how we react to it.",
+  "It always seems impossible until it's done.",
+  "What we think, we become.",
+  "If you can dream it, you can do it.",
+  "Wherever you go, go with all your heart.",
+  "Never stop learning because life never stops teaching.",
+  "Everything has beauty, but not everyone sees it.",
+  "Doubt kills more dreams than failure ever will.",
+  "Make each day your masterpiece.",
+  "The secret of getting ahead is getting started.",
+  "Your life does not get better by chance, it gets better by change.",
+  "Do something today that your future self will thank you for.",
+  "What you get by achieving your goals is not as important as what you become.",
+  "Don’t stop when you’re tired. Stop when you're done.",
+  "If you want something you’ve never had, you must do something you’ve never done.",
+  "Start where you are. Use what you have. Do what you can.",
+  "Push yourself because no one else is going to do it for you.",
+  "Great things never come from comfort zones.",
+  "Stay focused and never give up.",
+  "Small steps every day lead to big results.",
+  "You are stronger than you think.",
+  "Impossible is just an opinion.",
+  "Believe in yourself and all that you are.",
+  "Your only limit is your mind.",
+  "Don’t wait for opportunity. Create it.",
+  "Work hard in silence, let success make the noise.",
+  "Focus on being productive instead of busy.",
+  "Success doesn’t come from what you do occasionally; it comes from what you do consistently.",
+  "Dream it. Wish it. Do it.",
+  "A little progress each day adds up to big results.",
+  "Don’t limit your challenges. Challenge your limits.",
+  "Failure is not the opposite of success; it is part of success.",
+  "Don’t be afraid to start over. It's a new chance to rebuild what you want.",
+  "There is no substitute for hard work.",
+  "With the new day comes new strength and new thoughts.",
+  "The best time for new beginnings is now.",
+  "Don’t let yesterday take up too much of today.",
+  "Perseverance is failing 19 times and succeeding the 20th.",
+  "The only limit to our realization of tomorrow is our doubts of today.",
+  "Every moment is a fresh beginning.",
+  "You miss 100% of the shots you don’t take.",
+  "To be the best, you must be able to handle the worst.",
+  "Success is the sum of small efforts repeated day in and day out.",
+  "Action is the foundational key to all success.",
+  "If you’re going through hell, keep going.",
+  "If you want to achieve greatness stop asking for permission.",
+  "The way to get started is to quit talking and begin doing.",
+  "You don’t need to be perfect to be amazing.",
+  "Stay positive. Work hard. Make it happen.",
+  "The key to success is to focus on goals, not obstacles.",
+  "You become what you believe.",
+  "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+  "Opportunities don’t happen, you create them.",
+  "Don’t let what you cannot do interfere with what you can do.",
+  "Failure is simply the opportunity to begin again.",
+  "Hardships often prepare ordinary people for an extraordinary destiny.",
+  "Your attitude determines your direction.",
+  "Success usually comes to those who are too busy to be looking for it.",
+  "Don’t fear failure. Fear being in the same place next year.",
+  "Be so good they can't ignore you.",
+  "You have power over your mind — not outside events.",
+  "Don’t let small minds convince you your dreams are too big.",
+  "Keep your face always toward the sunshine—and shadows will fall behind you.",
+  "Discipline is choosing what you want most over what you want now.",
+  "Never regret anything that made you smile.",
+  "Life is short. Make it sweet.",
+  "Everything you can imagine is real.",
+  "Success is not for the lazy.",
+  "You are what you do, not what you say you'll do.",
+  "Your only competition is yourself.",
+  "Life begins at the end of your comfort zone.",
+  "When you feel like quitting, think about why you started.",
+  "Big journeys begin with small steps.",
+  "You don’t find the happy life. You make it.",
+  "A goal without a plan is just a wish.",
+  "Success starts with self-discipline.",
+  "Nothing will work unless you do.",
+  "Make your life a masterpiece.",
+  "Stay hungry. Stay foolish.",
+  "Believe in the magic of new beginnings.",
+  "The best view comes after the hardest climb.",
+  "Don’t just exist. Live.",
+  "Every day is a second chance."
+];
+
+
+function printQuote(){
+let destination = document.getElementById("quote");
+
+// for quote
+destination.innerHTML = quotes[Math.floor(Math.random()*quotes.length)];
+
+
+// for bg color
+let bgColour = document.getElementById("root");
+let min = 0;
+let max = 255;
+let num1 = Math.floor(Math.random()*(max-min+1)+min);
+let num2 = Math.floor(Math.random()*(max-min+1)+min);
+let num3 = Math.floor(Math.random()*(max-min+1)+min);
+bgColour.style.backgroundColor = `rgba(${num1}, ${num2}, ${num3} , 0.1)`;
+
+destination.style.color = `rgb(${num1}, ${num2}, ${num3} )`;
+}
+
+let root = document.getElementById("root");
+let ele = document.createElement("button");
+ele.innerText = "click me";
+ele.id= "button";
+root.appendChild(ele);
+
+
+// let dest = document.getElementById("button");
+// ele.addEventListener("click", printQuote);
+
+// document.addEventListener("mouseover", printQuote)
+
+// document.addEventListener("keydown", (event)=>{
+//     if(event.key==="r"){
+//         printQuote();
+//     }
+// })
+
+document.addEventListener("touchstart", (event)=>{
+    if(event.key==="r"){
+        printQuote();
+    }
+})
+    </script>
+</body>
+</html>
