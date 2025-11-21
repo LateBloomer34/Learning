@@ -100,15 +100,20 @@ const quotes = [
 ];
 
 
-
-
+function printQuote(){
 let destination = document.getElementById("quote");
 
-let index = 0;
-function printQuote(){
-    if (index<quotes.length){
-        destination.innerHTML = quotes[Math.floor(Math.random()*(quotes.length-index+1)-index)];
-    }
+destination.innerHTML = quotes[Math.floor(Math.random()*quotes.length)];
+
+let bgColour = document.getElementById("root");
+let min = 0;
+let max = 255;
+let num1 = Math.floor(Math.random()*(max-min+1)+min);
+let num2 = Math.floor(Math.random()*(max-min+1)+min);
+let num3 = Math.floor(Math.random()*(max-min+1)+min);
+bgColour.style.backgroundColor = `rgba(${num1}, ${num2}, ${num3} , 0.2)`;
+
+destination.style.color = `rgb(${num3}, ${num1}, ${num2} )`;
 }
-printQuote();
+// printQuote();
 setInterval(printQuote , 3000);
