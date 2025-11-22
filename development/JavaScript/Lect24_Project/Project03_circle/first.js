@@ -26,7 +26,7 @@ function operation(e){
 
     setTimeout(()=>{
         circle.remove();
-    }, 5000);
+    }, 3000);
     // if we dont add this settimeout circle it will stay in our code, so need to remove it after 5 sec , settimeOut will atomatically delete that element after 5 sec
 
 }
