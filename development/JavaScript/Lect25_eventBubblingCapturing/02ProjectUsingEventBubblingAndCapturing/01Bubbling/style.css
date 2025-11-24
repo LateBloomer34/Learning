@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 2em;
+}
+#heading{
+    color: white;
+}
+#red{
+    height: 10vh;
+    width: 5vw;
+    background-color: red;
+}
+#blue{
+     height: 10vh;
+    width: 5vw;
+    background-color: blue;
+}
+#pink{
+     height: 10vh;
+    width: 5vw;
+    background-color: pink;
+}
+#purple{
+     height: 10vh;
+    width: 5vw;
+    background-color: purple;
+}
