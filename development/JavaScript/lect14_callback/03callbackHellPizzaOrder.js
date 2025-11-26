@@ -36,3 +36,21 @@ function deliverOrder(){
 }
 //
 placeOrder(preparingOrder);
+
+
+// problem with the call back  - 
+// i- callback hell - to many nested callback 
+//1-  problem with the callback - 
+
+// readibility , maintainance, hard to debug, code increses vertically (pyramid shape)
+
+// 2- inversion of control - we will loose control over the code, or give control of code to other funcion , in below example , thw dispacth order will only execute when preparingorder will execute, otherwise it will not work,
+
+// placeOrder(preparingOrder); => the actual reprentation of this code is:-
+//     placeOrder(()=>{
+//         preparingOrder(()=>{
+//             dispatchOrder(()=>{
+//                 deliverOrder();
+//             })
+//         })
+//     }) 
