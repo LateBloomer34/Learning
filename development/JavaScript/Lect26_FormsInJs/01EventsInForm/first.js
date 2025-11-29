@@ -1,4 +1,4 @@
-let form = document.querySelector("form");
+// let form = document.querySelector("form");
 
 
 // event folllow the bubbling by default , if we change its state to capturing, add third argument in callabck as true
@@ -88,4 +88,25 @@ let form = document.querySelector("form");
 
 
 //event.preventDefault() ; // form will SubmitEvent, but page will not refresh.
+
+let form  = document.querySelector("button");
+
+form.addEventListener("click" , (event)=>{
+    event.preventDefault();
+    let fName = document.getElementById("userName");
+    console.log(fName.value);
+
+    let lName = document.getElementById("lastName");
+    console.log(lName.value);
+
+    let age = document.querySelector("#age");
+    console.log(age.value);
+    
+
+    // print in result id div
+    let result = document.getElementById("result");
+    result.innerText = `user's first Name is ${fName.value} and last name is ${lName.value} and age is ${age.value}`
+    
+     
+})
 
