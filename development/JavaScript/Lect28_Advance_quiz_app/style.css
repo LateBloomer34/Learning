@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background: linear-gradient(135deg, #f6eac2, #f2d1ff);
+}
+#root {
+    padding: 3em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#quizContainer {
+    background: white;
+    padding: 3em;
+    width: 90%;
+    max-width: 55rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 2rem 4rem rgba(0,0,0,0.15);
+}
+h1 {
+    text-align: center;
+    padding-bottom: 0.7em;
+    font-size: 2.4rem;
+    color: #5a2d82;
+}
+h2 {
+    margin-top: 1.6em;
+    font-size: 1.3rem;
+    color: #333;
+}
+#quiz {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+label {
+    display: flex;
+    align-items: center;
+    background: #f8f8ff;
+    padding: 1em 1.2em;
+    border-radius: 0.8rem;
+    margin-left: 1em;
+    cursor: pointer;
+    border: 0.1rem solid #ddd;
+}
+label:hover {
+    background: #efe8ff;
+}
+input[type="radio"] {
+    cursor: pointer;
+}
+pre {
+    background: #f3f3f3;
+    padding: 1em;
+    border-radius: 0.8rem;
+    margin-left: 1em;
+    font-size: 1rem;
+}
+#button {
+    margin-top: 2.5em;
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+}
+button {
+    padding: 0.8em 2.2em;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    background: #ffd447;
+}
+button:hover {
+    background: #ff9ad1;
+    transform: scale(1.05);
+}
+#result {
+    background-color: #efe8ff;
+    padding: 1em;
+    margin-top: 2em;
+    font-weight: 900;
+    color: #333;
+    text-align: center; 
+}
+input[type="radio"] {
+    margin-right: 2em; /* space between radio and label text */
+}
