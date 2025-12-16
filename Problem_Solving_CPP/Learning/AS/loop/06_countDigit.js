@@ -1,6 +1,9 @@
 let num = 256;
 
 function countDigit(num){
+    if (num===0){
+        return 0;
+    }
     let count = 0;
 
     if (num<0){

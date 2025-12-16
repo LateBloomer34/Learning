@@ -5,7 +5,9 @@ using namespace std;
 
 int countDigit(int num){
     int count = 0;
-
+    if (num==0){
+        return 0;
+    }
     if (num <0 ){
         num = num*-1;
     }
@@ -18,7 +20,7 @@ int countDigit(int num){
 }
 
 int main (){
-    int num = 10;
+    int num = 897;
     int result = countDigit(num);
     cout<<result;
 }
