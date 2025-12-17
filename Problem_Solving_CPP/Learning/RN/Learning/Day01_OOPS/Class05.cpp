@@ -42,3 +42,4 @@ int main (){
     int deporem = user.balance(depo);
     cout<<"your remianing balance in account is  "<<remaining;
 }
+

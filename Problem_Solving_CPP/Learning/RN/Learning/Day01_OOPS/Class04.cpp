@@ -16,7 +16,6 @@ public:
 };
 
 
-
 int main (){
     student s1;
     cout<<s1.getName();

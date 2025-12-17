@@ -15,3 +15,4 @@ cout<<details.age<<endl;
 details.name = "raju";
 cout<<details.name<<endl;
 }
+

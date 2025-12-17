@@ -15,7 +15,6 @@ int marks(){
 }
 };
 
-
 void fun (){
     student s1;
     s1.name = "himanshu";
