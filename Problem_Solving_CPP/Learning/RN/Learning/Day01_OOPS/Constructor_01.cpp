@@ -7,7 +7,6 @@
 // it run automatically when created;
 
 
-
 // types of constructor
 // default
 // parameterize

@@ -12,7 +12,6 @@ class car{
        // here car is a constructor which is a function doent have any return type and it eqecute automatically
         cout<<"construcor created ";
     }
-
 };
 
 int main (){
