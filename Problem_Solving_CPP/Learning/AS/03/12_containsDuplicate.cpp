@@ -36,13 +36,11 @@ bool dupli(vector<int>nums){
 
     unordered_set<int>s;
         for(int i  = 0; i< n ; i++){
-            if (s.count(nums[i])>0){
+            s.insert(nums[i]);
+            if (s.count(nums[i])>1){
                 return true;
             }
-            s.insert(nums[i]);
         }
-
-
 return false;
 }
 
