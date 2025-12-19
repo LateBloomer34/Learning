@@ -3,35 +3,37 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// reverse a number using recrusion method 1 -
 
-// method 1 - baisc method
-// int reverse(int num){
-//     int revNum = 0;
-//     while(num>0){
-//     int rem = num%10;
-//         revNum = revNum*10+rem;
-//         num = num/10;
-//     }
-//     return revNum;
+// int digit (int num){
+//     if (num==0){
+//         return 0;
+//     }   
+//     return 1+digit(num/10);
 // }
 
-// using recrusion
+// int reverse(int num){
+//     if (num==0){
+//         return 0;
+//     }
+//     int count = digit(num)-1;
+    
+//     return num%10*(pow(10, count)) + reverse(num/10);
+// }
 
-int digit (int num){
-    if (num==0){
-        return 0;
-    }   
-    return 1+(num/10);
-}
+// reverse a number using recrusion method 2- 
+
+
 
 int reverse(int num){
-    if (num==0){
-        return 0;
+    static int rev = 0;
+    if (num ==0){
+        return rev;
     }
-    int count = digit(num)-1;
-    
-    return (num%10*(pow(10, count)))+reverse(num/10);
+    rev = rev*10+(num%10);
+    return reverse(num/10);
 }
+
 
 
 int main() {
