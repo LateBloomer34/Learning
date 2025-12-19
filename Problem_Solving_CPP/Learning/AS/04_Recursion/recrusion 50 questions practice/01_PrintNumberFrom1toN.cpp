@@ -3,15 +3,16 @@
 #include<iostream>
 using namespace std;
 
-int print (int n){
-    if (n>10){
+int print (int n, int dest){
+    if (n>dest){
         return 0;
     }
    cout<<n<<" ";
-    return print(n+1);
+    return print(n+1, dest);
 }
 
 int main (){
     int n = 1;
-    print(n);
+    int dest = 10;
+    print(n, dest);
 }
