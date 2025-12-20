@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int rev (vector<int> & arr){
+int mini (vector<int> & arr){
     static int start = 0;
     static int end = arr.size()-1;
     static int max = INT_MIN;
@@ -12,11 +12,11 @@ int rev (vector<int> & arr){
         max = arr[start];
     }
     start++;
-    return rev(arr);
+    return mini(arr);
     // return max;
 }
 
 int main (){
     vector<int>arr = {-1, 6, 9};
-    cout<<rev(arr);
+    cout<<mini(arr);
 }
