@@ -19,7 +19,7 @@ int j =0 ;
 int main (){
     vector<int>arr={1,2,3,3,4,4,5,6};
     int j = uniq(arr);
-    for (int i = 0 ; i <=j ; i++){
-        cout<<arr[i]<<" ";
+    for (auto i : vector<int>(arr.begin(), arr.begin()+j+1)){
+        cout<<i<<" ";
     }
 }
