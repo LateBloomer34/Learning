@@ -44,15 +44,14 @@ cout<<endl;
 
 // 5-Resize a vector to a larger size with default values.
 cout<<"Resize a vector to a larger size with default values."<<endl;
-arr.insert(arr.end(),5,0);
+arr.resize(8); // change the size of array , new slots fill with 0;
 for (auto i :arr){
     cout<<i<<" ";
 }
 cout<<endl;
-
 // 6- Resize a vector to a smaller size and observe changes.
 
-arr.erase(arr.begin()+2 , arr.end());
+arr.resize(3);
 for (auto i :arr){
     cout<<i<<" ";
 }
@@ -131,5 +130,20 @@ for (auto i :arr){
 }
 cout<<endl;
 
+//15-  Use `emplace` and `emplace_back` to add elements efficiently.
 
+arr.push_back(2);
+cout<<"array after emplace back"<<endl;
+for (auto i :arr){
+    cout<<i<<" ";
+}
+cout<<endl;
+
+cout<<"array after emplace front"<<endl;
+// arr.emplace_front(0);// it is not woking in vector , working in list
+arr.emplace(arr.begin()+2 , 9);
+for (auto i :arr){
+    cout<<i<<" ";
+}
+cout<<endl;
 }
