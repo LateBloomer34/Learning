@@ -7,6 +7,7 @@ int main (){
     list<int>li = {1,12,3,4};
     int n = li.size();
    
+    
     // print the list
     // for (auto i = li.begin(); i <= li.end(); i++){
     //     cout<<*i<<" ";
