@@ -1,4 +1,4 @@
-// order not known , wrther in ascending or descending order
+//The order is unknown — it could be ascending or descending.
 
 
 #include<iostream>
