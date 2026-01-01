@@ -18,7 +18,6 @@ int search(vector<int> &arr , int target){
         if (arr[mid]== target){
             return mid;
         }
-
         else if (target<arr[mid]){
             start = mid+1;
         }
