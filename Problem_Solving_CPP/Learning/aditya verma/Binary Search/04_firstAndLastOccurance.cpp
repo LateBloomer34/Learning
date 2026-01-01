@@ -1,3 +1,5 @@
+// first and last occurance of an element
+
 #include<iostream>
 using namespace std;
 #include<vector>
