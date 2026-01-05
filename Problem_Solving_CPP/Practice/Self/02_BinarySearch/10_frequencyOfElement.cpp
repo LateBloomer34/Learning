@@ -36,6 +36,7 @@ int freq(vector<int> &arr , int target){
     }
     ub = start;
     return ub-lb;
+    
 }
 
 
